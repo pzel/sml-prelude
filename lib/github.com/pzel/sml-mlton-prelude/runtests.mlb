@@ -1,0 +1,11 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+in
+mlton-prelude.sml
+mlton-prelude-tests.sml
+ann
+  "poly:ignoreFiles runtests-main.sml"
+in
+  runtests-main.sml
+end
+end
