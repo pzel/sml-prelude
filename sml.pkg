@@ -1,4 +1,5 @@
-package github.com/pzel/sml-mlton-prelude
+package github.com/pzel/sml-prelude
 
 require {
+  github.com/pzel/sml-either 0.0.1
 }

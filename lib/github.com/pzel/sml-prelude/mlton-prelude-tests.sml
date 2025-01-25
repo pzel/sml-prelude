@@ -24,7 +24,19 @@ fun main () =
                      list = sub2 [3,4,5]
                      andalso
                      list = sub3 [4,5,6]
+                   end);
+     val _ = test "eliminating parentheses" (
+           fn _ => let val res = Int.toString \> 1 + 2
+                   in res = "3"
+                   end);
+
+     val _ = test "piping" (
+           fn _ => let val res = Int.toString \> 1 + 2
+                   in res = "3"
                    end)
+
+
+
 
     in
       print "\nOK\n"

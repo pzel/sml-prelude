@@ -33,7 +33,7 @@ fun id x = x
 datatype ('a, 'b) product = & of 'a * 'b
 
 (* Sum type *)
-datatype ('a, 'b) sum = INL of 'a | INR of 'b
+type ('a, 'b) sum = ('a, 'b) Either.either
 
 (* Some type shorthands *)
 type 'a uop = 'a -> 'a

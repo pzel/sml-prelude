@@ -6,6 +6,11 @@ defined by the MLton authors
  - http://www.mlton.org/Utilities
  - http://www.mlton.org/InfixingOperators
 
+as well as the Either library as authored by John Reppy
+
+ - https://github.com/pzel/sml-either
+
+
 available in one place that's accessible via the [smlpkg package
 manager](https://github.com/diku-dk/smlpkg).
 
