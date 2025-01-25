@@ -2,5 +2,5 @@ local
   $(SML_LIB)/basis/basis.mlb
   $(SMLPKG)/github.com/pzel/sml-either/either.mlb
 in
-mlton-prelude.sml
+prelude.sml
 end
