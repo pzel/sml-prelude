@@ -35,7 +35,10 @@ fun main () =
                    in res = "3"
                    end)
 
-
+     val _ = test "Either is reexported but INR is implicitly there" (
+           fn _ => let val right = INR 3
+                   in Either.asRight right = SOME 3
+                   end)
 
 
     in
