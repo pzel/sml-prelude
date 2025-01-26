@@ -9,6 +9,8 @@
    From 2025-01-05T17:09
 *)
 
+open Either.Cons
+
 (* Operator precedence table *)
 infix   8  * / div mod        (* +1 from Basis Library *)
 infix   7  + - ^              (* +1 from Basis Library *)
