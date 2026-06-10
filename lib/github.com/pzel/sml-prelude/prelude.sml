@@ -30,6 +30,7 @@ fun cross (f, g) (x, y) = (f x, g y)
 fun curry f x y = f (x, y)
 fun fail e _ = raise e
 fun id x = x
+fun flip f x y = f y x
 
 (* Product type *)
 datatype ('a, 'b) product = & of 'a * 'b

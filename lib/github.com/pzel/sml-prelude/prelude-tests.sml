@@ -40,6 +40,13 @@ fun main () =
                    in Either.asRight right = SOME 3
                    end)
 
+     val _ = test "flip flips arguments" (
+           fn _ => let fun subtract a b = a - b
+                       val f = flip subtract
+                       val res = f 3 5
+                       in res = 2
+                   end)
+
 
     in
       print "\nOK\n"
