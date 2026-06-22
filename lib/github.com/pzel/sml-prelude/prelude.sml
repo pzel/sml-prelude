@@ -35,6 +35,17 @@ fun flip f x y = f y x
 (* Product type *)
 datatype ('a, 'b) product = & of 'a * 'b
 
+(* aliases for N-ary productN types *)
+type ('a, 'b) P = ('a, 'b) product
+type ('a, 'b, 'c) product3 = (('a, 'b) P, 'c) P
+type ('a, 'b, 'c, 'd) product4 = ((('a, 'b) P, 'c) P, 'd) P
+type ('a, 'b, 'c, 'd, 'e) product5 = (((('a, 'b) P, 'c) P, 'd) P, 'e) P
+type ('a, 'b, 'c, 'd, 'e, 'f) product6 = ((((('a, 'b) P, 'c) P, 'd) P, 'e) P, 'f) P
+type ('a, 'b, 'c, 'd, 'e, 'f, 'g) product7 = (((((('a, 'b) P, 'c) P, 'd) P, 'e) P, 'f) P, 'g) P
+type ('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h) product8 = ((((((('a, 'b) P, 'c) P, 'd) P, 'e) P, 'f) P, 'g) P, 'h) P
+type ('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i) product9 = (((((((('a, 'b) P, 'c) P, 'd) P, 'e) P, 'f) P, 'g) P, 'h) P,'i) P
+
+
 (* Sum type *)
 type ('a, 'b) sum = ('a, 'b) Either.either
 

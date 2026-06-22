@@ -47,6 +47,27 @@ fun main () =
                        in res = 2
                    end)
 
+     val _ = test "up to 9-ary products can be type with productN alias, constructed and deconstructed" (
+           fn _ => let val (a & b) : (int, int) product =
+                           1 & 2
+                       val (a & b & c) : (int, int, string) product3 =
+                           1 & 2 & "a"
+                       val (a & b & c & d ) : (int, int, string, 'a list) product4 =
+                           1 & 2 & "a" & []
+                       val (a & b & c & d & e) : (int, int, string, 'a list, int list) product5 =
+                           1 & 2 & "a" & [] & [1]
+                       val (a & b & c & d & e & f) : (int, int, string, 'a list, int list, unit) product6 =
+                           1 & 2 & "a" & [] & [1] & ()
+                       val (a & b & c & d & e & f & g) : (int, int, string, 'a list, int list, unit, ('a -> 'a)) product7 =
+                           1 & 2 & "a" & [] & [1] & () & (fn x => x)
+                       val (a & b & c & d & e & f & g & h) : (int, int, string, 'a list, int list, unit, ('a -> 'a), char) product8 =
+                           1 & 2 & "a" & [] & [1] & () & (fn x => x) & #"a"
+                       val (a & b & c & d & e & f & g & h & i) : (int, int, string, 'a list, int list, unit, ('a -> 'a), char, bool) product9 =
+                           1 & 2 & "a" & [] & [1] & () & (fn x => x) & #"a" & true
+                       in 3 = a + b andalso (g i)
+                   end)
+
+
 
     in
       print "\nOK\n"
