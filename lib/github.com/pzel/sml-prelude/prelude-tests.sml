@@ -47,6 +47,18 @@ fun main () =
                        in res = 2
                    end)
 
+
+     val _ = test "up to 9-ary tuples can be constructed" (
+           fn _ => let val (a,b) = tup2 1 2
+                       val (a,b,c) = tup3 1 2 "a"
+                       val (a,b,c,d )  = tup4 1 2 "a" []
+                       val (a,b,c,d,e) = tup5 1 2 "a" [] [1]
+                       val (a,b,c,d,e,f) = tup6 1 2 "a" [] [1] ()
+                       val (a,b,c,d,e,f,g) = tup7 1 2 "a" [] [1] () (fn x => x)
+                       val (a,b,c,d,e,f,g,h) = tup8 1 2 "a" [] [1] () (fn x => x) #"a"
+                       val (a,b,c,d,e,f,g,h,i) = tup9 1 2 "a" [] [1] () (fn x => x) #"a" true
+                       in (3 = a + b) andalso (g i) andalso (hd e = 1)
+                   end)
      val _ = test "up to 9-ary products can be type with productN alias, constructed and deconstructed" (
            fn _ => let val (a & b) : (int, int) product =
                            1 & 2

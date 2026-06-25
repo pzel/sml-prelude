@@ -32,6 +32,16 @@ fun fail e _ = raise e
 fun id x = x
 fun flip f x y = f y x
 
+(* tuple constructors *)
+fun tup2 a b = (a,b)
+fun tup3 a b c = (a,b,c)
+fun tup4 a b c d = (a,b,c,d)
+fun tup5 a b c d e = (a,b,c,d,e)
+fun tup6 a b c d e f = (a,b,c,d,e,f)
+fun tup7 a b c d e f g = (a,b,c,d,e,f,g)
+fun tup8 a b c d e f g h = (a,b,c,d,e,f,g,h)
+fun tup9 a b c d e f g h i = (a,b,c,d,e,f,g,h,i)
+
 (* Product type *)
 datatype ('a, 'b) product = & of 'a * 'b
 
